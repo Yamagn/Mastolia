@@ -314,6 +314,7 @@
                         <outlet property="screenName" destination="ihB-pR-eDo" id="VQT-oT-14u"/>
                         <outlet property="userName" destination="PIe-Ke-hGZ" id="GjR-db-fnR"/>
                         <segue destination="d5b-vX-L6u" kind="show" identifier="showUserList" id="4af-LA-8se"/>
+                        <segue destination="Sqz-TG-Iqg" kind="show" identifier="showSetting" id="c3x-Zm-ff3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xD3-p9-7a8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -467,6 +468,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1D-Jn-ZvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2245.5999999999999" y="-41.829085457271368"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="EBS-33-FUd">
+            <objects>
+                <viewController id="Sqz-TG-Iqg" customClass="SettingViewController" customModule="Mastlia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uhR-5U-7Ce">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ijh-Nn-UWP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sqz-TG-Iqg" id="ULZ-bJ-Ndl"/>
+                                    <outlet property="delegate" destination="Sqz-TG-Iqg" id="chv-M3-A7z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ijh-Nn-UWP" firstAttribute="bottom" secondItem="1xB-eu-G7w" secondAttribute="bottom" id="h99-V8-mRo"/>
+                            <constraint firstItem="Ijh-Nn-UWP" firstAttribute="top" secondItem="1xB-eu-G7w" secondAttribute="top" id="mJ5-4p-ziF"/>
+                            <constraint firstItem="Ijh-Nn-UWP" firstAttribute="leading" secondItem="1xB-eu-G7w" secondAttribute="leading" id="t0K-kF-0dL"/>
+                            <constraint firstItem="Ijh-Nn-UWP" firstAttribute="trailing" secondItem="1xB-eu-G7w" secondAttribute="trailing" id="tEP-eh-EV5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1xB-eu-G7w"/>
+                    </view>
+                    <connections>
+                        <outlet property="settingTableView" destination="Ijh-Nn-UWP" id="hji-Xc-OiQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-qd-til" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895.2" y="2160.2698650674665"/>
         </scene>
         <!--User List View Controller-->
         <scene sceneID="9Gf-9E-f79">

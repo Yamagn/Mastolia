@@ -172,7 +172,7 @@ class UserViewController: UIViewController {
                 }
             }
         } else {
-            
+            performSegue(withIdentifier: "showSetting", sender: nil)
         }
     }
 }

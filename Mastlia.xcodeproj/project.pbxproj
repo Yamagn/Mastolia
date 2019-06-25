@@ -12,6 +12,9 @@
 		07172E5122ABD2160062C5BD /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07172E5022ABD2160062C5BD /* UserListViewController.swift */; };
 		0735463122AA4B7300EA4D39 /* UserStatusesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735463022AA4B7300EA4D39 /* UserStatusesViewController.swift */; };
 		07690AF321D4C5850049FE58 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07690AF221D4C5850049FE58 /* UserViewController.swift */; };
+		07B825B522BDE09700542B83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B825B422BDE09700542B83 /* SettingViewController.swift */; };
+		07B825BA22BDE0ED00542B83 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B825B822BDE0ED00542B83 /* SettingCell.swift */; };
+		07B825BB22BDE0ED00542B83 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B825B922BDE0ED00542B83 /* SettingCell.xib */; };
 		520003C421A7AC62002E90BF /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520003C321A7AC62002E90BF /* login.storyboard */; };
 		520003C621A7AF10002E90BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520003C521A7AF10002E90BF /* LoginViewController.swift */; };
 		524D57A221A83933003FD9B7 /* TootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D57A021A83933003FD9B7 /* TootCell.swift */; };
@@ -87,6 +90,9 @@
 		07172E5022ABD2160062C5BD /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		0735463022AA4B7300EA4D39 /* UserStatusesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusesViewController.swift; sourceTree = "<group>"; };
 		07690AF221D4C5850049FE58 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		07B825B422BDE09700542B83 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		07B825B822BDE0ED00542B83 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		07B825B922BDE0ED00542B83 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		2B26D5CFAD1164C449F2D2B4 /* Pods-MastliaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaUITests.debug.xcconfig"; path = "Target Support Files/Pods-MastliaUITests/Pods-MastliaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E2EC610FAE7C264DF0EC676 /* Pods_MastliaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MastliaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		520003C321A7AC62002E90BF /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 		52331DC821AED2C20094C4BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07B825B822BDE0ED00542B83 /* SettingCell.swift */,
 				5273ECD621A63B7C006F95FB /* ViewController.swift */,
 				520003C521A7AF10002E90BF /* LoginViewController.swift */,
 				524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */,
@@ -220,6 +227,7 @@
 				0735463022AA4B7300EA4D39 /* UserStatusesViewController.swift */,
 				07172E4C22ABC7530062C5BD /* UserListCell.swift */,
 				07172E5022ABD2160062C5BD /* UserListViewController.swift */,
+				07B825B422BDE09700542B83 /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
 				529248ED21B759220055F906 /* ReblogCell.xib */,
 				5279783E21B77C3D00B95775 /* NotificationCell.xib */,
+				07B825B922BDE0ED00542B83 /* SettingCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				5273ECDC21A63B7E006F95FB /* Assets.xcassets in Resources */,
 				52677A3D21B02CE1005F6C43 /* home@2x.png in Resources */,
 				52677A4D21B02D9D005F6C43 /* reply@2x.png in Resources */,
+				07B825BB22BDE0ED00542B83 /* SettingCell.xib in Resources */,
 				52ED542421B7AE0B00D03AC3 /* person_add.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,10 +594,12 @@
 				524D57A521A8409E003FD9B7 /* TimeLineViewController.swift in Sources */,
 				0735463122AA4B7300EA4D39 /* UserStatusesViewController.swift in Sources */,
 				524D57A221A83933003FD9B7 /* TootCell.swift in Sources */,
+				07B825BA22BDE0ED00542B83 /* SettingCell.swift in Sources */,
 				525F68CE21B586D700E0CA0B /* DetailViewController.swift in Sources */,
 				52A8329421AA9FBB008F41F5 /* Toots.swift in Sources */,
 				07172E5122ABD2160062C5BD /* UserListViewController.swift in Sources */,
 				5279783A21B77AF300B95775 /* NotificationViewController.swift in Sources */,
+				07B825B522BDE09700542B83 /* SettingViewController.swift in Sources */,
 				525F68D521B5872500E0CA0B /* ActivityCell.swift in Sources */,
 				529248EE21B759220055F906 /* ReblogCell.swift in Sources */,
 				5279783F21B77C3D00B95775 /* NotificationCell.swift in Sources */,
