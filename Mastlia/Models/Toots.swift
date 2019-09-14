@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Fuzi
 
 struct Toots: Codable {
     var created_at: String

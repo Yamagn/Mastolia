@@ -1,5 +1,4 @@
 PODS:
-  - Fuzi (2.1.0)
   - MastodonKit (2.0.0)
   - Realm (3.11.2):
     - Realm/Headers (= 3.11.2)
@@ -8,23 +7,20 @@ PODS:
     - Realm (= 3.11.2)
 
 DEPENDENCIES:
-  - Fuzi
   - MastodonKit (= 2.0.0)
   - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Fuzi
     - MastodonKit
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
-  Fuzi: 8c57344debff6d3a0c76a9e0f549152defdaaa48
   MastodonKit: 3bc591ea7e626dd160711f9a10cd50f192e46ed3
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
   RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
 
-PODFILE CHECKSUM: 901e7e5abfae69b6ab9e3a9fdb4628ed2ffe4d21
+PODFILE CHECKSUM: d0ad91c511b04f05181e5bd8dcc52b6681877499
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0.beta.2

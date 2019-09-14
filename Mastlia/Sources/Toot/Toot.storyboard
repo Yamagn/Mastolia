@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dqf-qH-JDT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Toot-->
+        <scene sceneID="gIi-bQ-5mq">
+            <objects>
+                <viewController title="Toot" automaticallyAdjustsScrollViewInsets="NO" id="dqf-qH-JDT" customClass="TootViewController" customModule="Mastlia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6h-UX-Cqx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpG-BR-7QB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="トゥート" id="qfw-Hq-f1f">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="NKo-Zx-Len">
+                                            <connections>
+                                                <action selector="backPage:" destination="dqf-qH-JDT" id="LvI-nP-E6k"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Toot" style="plain" id="nqC-LD-h8f">
+                                            <connections>
+                                                <action selector="onTootTapped:" destination="dqf-qH-JDT" id="Z3i-wZ-E0p"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="aaaaaa" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mz0-Is-TPo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="421"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CpG-BR-7QB" firstAttribute="leading" secondItem="PiQ-pN-eJN" secondAttribute="leading" id="8X1-24-AGW"/>
+                            <constraint firstItem="CpG-BR-7QB" firstAttribute="top" secondItem="PiQ-pN-eJN" secondAttribute="top" id="Ujv-L2-z3v"/>
+                            <constraint firstItem="CpG-BR-7QB" firstAttribute="trailing" secondItem="PiQ-pN-eJN" secondAttribute="trailing" id="qZ2-2Y-4kQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PiQ-pN-eJN"/>
+                    </view>
+                    <connections>
+                        <outlet property="tootField" destination="Mz0-Is-TPo" id="e5d-rJ-xcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIc-WT-ON7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245.5999999999999" y="-41.829085457271368"/>
+        </scene>
+    </scenes>
+</document>

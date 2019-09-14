@@ -50,11 +50,6 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
             let tootView: TootViewController = segue.destination as! TootViewController
             tootView.user = self.user as Account?
         }
-        
-        if segue.identifier == "showDetail" {
-            let detailView: DetailViewController = segue.destination as! DetailViewController
-            detailView.catchToot = selectContent
-        }
     }
     
     @IBAction func changeTL(_ sender: Any) {
@@ -112,7 +107,6 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = dataList[indexPath.row]
-        print(data)
         guard let reblog = data.reblog else {
             let cell: TootCell = tableView.dequeueReusableCell(withIdentifier: "TootCell", for: indexPath) as! TootCell
             cell.retCount.text = String(data.reblogsCount)
@@ -162,7 +156,10 @@ class TimeLineViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
         selectContent = dataList[indexPath.row]
         if selectContent != nil {
-            performSegue(withIdentifier: "showDetail", sender: nil)
+            let detailStoryBoard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+            let detailViewController: DetailViewController = detailStoryBoard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+            detailViewController.catchToot = selectContent
+            self.navigationController?.pushViewController(detailViewController, animated: true)
         }
     }
     

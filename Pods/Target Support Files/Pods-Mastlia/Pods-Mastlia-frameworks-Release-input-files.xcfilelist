@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MastodonKit/MastodonKit.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework

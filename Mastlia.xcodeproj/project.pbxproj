@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07653650232CBA4E006EB725 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0765364F232CBA4E006EB725 /* Detail.storyboard */; };
+		07653653232CBA6B006EB725 /* Toot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07653652232CBA6B006EB725 /* Toot.storyboard */; };
+		07653655232CBA7E006EB725 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07653654232CBA7E006EB725 /* Notification.storyboard */; };
+		07653657232CBA90006EB725 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07653656232CBA90006EB725 /* TimeLine.storyboard */; };
 		2BEFF2054FA5D91B485FEB9D /* Pods_MastliaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40493F5860D6B39D0342D33C /* Pods_MastliaUITests.framework */; };
 		5121E352D3A8D621FA8AC4AE /* Pods_MastliaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EA6D0B308FCDE7F5E57A87 /* Pods_MastliaTests.framework */; };
 		520003C421A7AC62002E90BF /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520003C321A7AC62002E90BF /* login.storyboard */; };
@@ -77,6 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0765364F232CBA4E006EB725 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		07653652232CBA6B006EB725 /* Toot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Toot.storyboard; sourceTree = "<group>"; };
+		07653654232CBA7E006EB725 /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		07653656232CBA90006EB725 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		1D840151FF9AF9D30C423E5B /* Pods-MastliaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MastliaUITests/Pods-MastliaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E249CFF2E61160EFB452ACF /* Pods-MastliaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MastliaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MastliaTests/Pods-MastliaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		40493F5860D6B39D0342D33C /* Pods_MastliaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MastliaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +177,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07653641232CB816006EB725 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				07653649232CB924006EB725 /* Detail */,
+				07653648232CB905006EB725 /* Toot */,
+				07653646232CB8A6006EB725 /* Settings */,
+				07653645232CB89B006EB725 /* Login */,
+				07653644232CB883006EB725 /* Notification */,
+				07653643232CB879006EB725 /* TimeLine */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		07653643232CB879006EB725 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				0765364C232CB989006EB725 /* Reblog */,
+				07653647232CB8E8006EB725 /* TootCell */,
+				524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */,
+				07653656232CBA90006EB725 /* TimeLine.storyboard */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		07653644232CB883006EB725 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				0765364D232CB9CE006EB725 /* NotificationCell */,
+				5279783921B77AF300B95775 /* NotificationViewController.swift */,
+				07653654232CBA7E006EB725 /* Notification.storyboard */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		07653645232CB89B006EB725 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				520003C321A7AC62002E90BF /* login.storyboard */,
+				520003C521A7AF10002E90BF /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		07653646232CB8A6006EB725 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		07653647232CB8E8006EB725 /* TootCell */ = {
+			isa = PBXGroup;
+			children = (
+				524D57A121A83933003FD9B7 /* TootCell.xib */,
+				524D57A021A83933003FD9B7 /* TootCell.swift */,
+			);
+			path = TootCell;
+			sourceTree = "<group>";
+		};
+		07653648232CB905006EB725 /* Toot */ = {
+			isa = PBXGroup;
+			children = (
+				52E40FCB21B3E46A00592B1F /* TootViewController.swift */,
+				07653652232CBA6B006EB725 /* Toot.storyboard */,
+			);
+			path = Toot;
+			sourceTree = "<group>";
+		};
+		07653649232CB924006EB725 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0765364E232CB9E7006EB725 /* DetailCell */,
+				0765364B232CB975006EB725 /* ActivityCountCell */,
+				0765364A232CB944006EB725 /* ActivityCell */,
+				525F68CD21B586D700E0CA0B /* DetailViewController.swift */,
+				0765364F232CBA4E006EB725 /* Detail.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0765364A232CB944006EB725 /* ActivityCell */ = {
+			isa = PBXGroup;
+			children = (
+				525F68D421B5872500E0CA0B /* ActivityCell.xib */,
+				525F68D321B5872500E0CA0B /* ActivityCell.swift */,
+			);
+			path = ActivityCell;
+			sourceTree = "<group>";
+		};
+		0765364B232CB975006EB725 /* ActivityCountCell */ = {
+			isa = PBXGroup;
+			children = (
+				525F68D021B5870800E0CA0B /* ActivityCountCell.xib */,
+				525F68CF21B5870800E0CA0B /* ActivityCountCell.swift */,
+			);
+			path = ActivityCountCell;
+			sourceTree = "<group>";
+		};
+		0765364C232CB989006EB725 /* Reblog */ = {
+			isa = PBXGroup;
+			children = (
+				529248ED21B759220055F906 /* ReblogCell.xib */,
+				529248EC21B759220055F906 /* ReblogCell.swift */,
+			);
+			path = Reblog;
+			sourceTree = "<group>";
+		};
+		0765364D232CB9CE006EB725 /* NotificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				5279783E21B77C3D00B95775 /* NotificationCell.xib */,
+				5279783D21B77C3D00B95775 /* NotificationCell.swift */,
+			);
+			path = NotificationCell;
+			sourceTree = "<group>";
+		};
+		0765364E232CB9E7006EB725 /* DetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				525F68C821B5851000E0CA0B /* DetailCell.xib */,
+				525F68C721B5851000E0CA0B /* DetailCell.swift */,
+			);
+			path = DetailCell;
+			sourceTree = "<group>";
+		};
 		3FEBF7FD44F98F193D4EDD3D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,16 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				5273ECD621A63B7C006F95FB /* ViewController.swift */,
-				520003C521A7AF10002E90BF /* LoginViewController.swift */,
-				524D57A421A8409E003FD9B7 /* TimeLineViewController.swift */,
-				52E40FCB21B3E46A00592B1F /* TootViewController.swift */,
-				524D57A021A83933003FD9B7 /* TootCell.swift */,
-				525F68CD21B586D700E0CA0B /* DetailViewController.swift */,
-				525F68CF21B5870800E0CA0B /* ActivityCountCell.swift */,
-				525F68D321B5872500E0CA0B /* ActivityCell.swift */,
-				529248EC21B759220055F906 /* ReblogCell.swift */,
-				5279783921B77AF300B95775 /* NotificationViewController.swift */,
-				5279783D21B77C3D00B95775 /* NotificationCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,9 +326,6 @@
 		524D579D21A7F07F003FD9B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				525F68D421B5872500E0CA0B /* ActivityCell.xib */,
-				525F68D021B5870800E0CA0B /* ActivityCountCell.xib */,
-				525F68C821B5851000E0CA0B /* DetailCell.xib */,
 				52ED542521B7AE4800D03AC3 /* person_add@2x.png */,
 				52ED542321B7AE0B00D03AC3 /* person_add.png */,
 				528F2E0421B0E74500E03FB9 /* add@2x.png */,
@@ -226,12 +346,8 @@
 				52677A3A21B02CD3005F6C43 /* home.png */,
 				52677A3821B02CBE005F6C43 /* timeline@2x.png */,
 				52677A3621B02C8F005F6C43 /* timeline.png */,
-				520003C321A7AC62002E90BF /* login.storyboard */,
 				525F68CB21B5869700E0CA0B /* Main.storyboard */,
-				524D57A121A83933003FD9B7 /* TootCell.xib */,
 				5273ECDD21A63B7E006F95FB /* LaunchScreen.storyboard */,
-				529248ED21B759220055F906 /* ReblogCell.xib */,
-				5279783E21B77C3D00B95775 /* NotificationCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -270,7 +386,7 @@
 		5273ECD321A63B7C006F95FB /* Mastlia */ = {
 			isa = PBXGroup;
 			children = (
-				525F68C721B5851000E0CA0B /* DetailCell.swift */,
+				07653641232CB816006EB725 /* Sources */,
 				52331DC821AED2C20094C4BF /* Controllers */,
 				524D57A821A85E23003FD9B7 /* Models */,
 				524D579D21A7F07F003FD9B7 /* Resources */,
@@ -422,12 +538,14 @@
 				525F68CA21B5851000E0CA0B /* DetailCell.xib in Resources */,
 				525F68CC21B5869800E0CA0B /* Main.storyboard in Resources */,
 				5279784021B77C3D00B95775 /* NotificationCell.xib in Resources */,
+				07653650232CBA4E006EB725 /* Detail.storyboard in Resources */,
 				520003C421A7AC62002E90BF /* login.storyboard in Resources */,
 				528F2E0321B0E73200E03FB9 /* add.png in Resources */,
 				525F68D621B5872500E0CA0B /* ActivityCell.xib in Resources */,
 				52677A4F21B02DB1005F6C43 /* star.png in Resources */,
 				529248EF21B759220055F906 /* ReblogCell.xib in Resources */,
 				528F2E0521B0E74500E03FB9 /* add@2x.png in Resources */,
+				07653653232CBA6B006EB725 /* Toot.storyboard in Resources */,
 				52677A3B21B02CD3005F6C43 /* home.png in Resources */,
 				52677A3921B02CBE005F6C43 /* timeline@2x.png in Resources */,
 				52677A4321B02D3E005F6C43 /* person.png in Resources */,
@@ -435,10 +553,12 @@
 				5273ECDF21A63B7E006F95FB /* LaunchScreen.storyboard in Resources */,
 				52677A5321B02DDC005F6C43 /* public.png in Resources */,
 				52677A3721B02C90005F6C43 /* timeline.png in Resources */,
+				07653655232CBA7E006EB725 /* Notification.storyboard in Resources */,
 				52677A4B21B02D8C005F6C43 /* reply.png in Resources */,
 				52677A4521B02D4B005F6C43 /* person@2x.png in Resources */,
 				525F68D221B5870800E0CA0B /* ActivityCountCell.xib in Resources */,
 				52677A4921B02D78005F6C43 /* retweet@2x.png in Resources */,
+				07653657232CBA90006EB725 /* TimeLine.storyboard in Resources */,
 				524D57A321A83933003FD9B7 /* TootCell.xib in Resources */,
 				52677A5121B02DBD005F6C43 /* star@2x.png in Resources */,
 				52677A3F21B02D14005F6C43 /* notify.png in Resources */,
@@ -495,26 +615,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
-				"${BUILT_PRODUCTS_DIR}/MastodonKit/MastodonKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MastodonKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mastlia/Pods-Mastlia-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		79EBC900F40B6EA388D81EB8 /* [CP] Check Pods Manifest.lock */ = {

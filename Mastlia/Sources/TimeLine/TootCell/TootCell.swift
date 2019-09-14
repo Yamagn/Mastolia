@@ -9,7 +9,6 @@
 import UIKit
 import MastodonKit
 import RealmSwift
-import Fuzi
 
 class TootCell: UITableViewCell {
     var user: Account = Account()

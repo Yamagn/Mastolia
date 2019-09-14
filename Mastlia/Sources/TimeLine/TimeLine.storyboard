@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s9q-C3-ZSJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TimeLine-->
+        <scene sceneID="iSO-hH-lV3">
+            <objects>
+                <viewController title="TimeLine" id="sf9-em-PeH" customClass="TimeLineViewController" customModule="Mastlia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moR-5u-oqq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ci6-k0-xy2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sf9-em-PeH" id="GjO-5q-HtF"/>
+                                    <outlet property="delegate" destination="sf9-em-PeH" id="IsG-HE-wwB"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="62a-DY-WPA">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bZ9-e4-76c"/>
+                                    <constraint firstAttribute="width" constant="50" id="hZQ-xb-6ND"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taw-2x-VJE">
+                                <rect key="frame" x="348" y="743" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HD3-wa-F30"/>
+                                    <constraint firstAttribute="height" constant="50" id="Wpy-kB-dxG"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="add.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postToot:" destination="sf9-em-PeH" eventType="touchUpInside" id="hl0-Kd-76Z"/>
+                                    <segue destination="MeO-MP-Y1K" kind="presentation" identifier="moveToot" id="EaG-1c-ISA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bAe-Sv-mkg" firstAttribute="bottom" secondItem="Taw-2x-VJE" secondAttribute="bottom" constant="20" id="9Pr-ZE-pma"/>
+                            <constraint firstItem="ci6-k0-xy2" firstAttribute="bottom" secondItem="bAe-Sv-mkg" secondAttribute="bottom" id="9UW-pP-Y0N"/>
+                            <constraint firstItem="62a-DY-WPA" firstAttribute="centerY" secondItem="moR-5u-oqq" secondAttribute="centerY" id="BVB-bx-i4A"/>
+                            <constraint firstItem="bAe-Sv-mkg" firstAttribute="trailing" secondItem="Taw-2x-VJE" secondAttribute="trailing" constant="16" id="NE0-bz-IMc"/>
+                            <constraint firstItem="62a-DY-WPA" firstAttribute="centerX" secondItem="moR-5u-oqq" secondAttribute="centerX" id="OdT-tS-ccc"/>
+                            <constraint firstItem="ci6-k0-xy2" firstAttribute="trailing" secondItem="bAe-Sv-mkg" secondAttribute="trailing" id="gyC-uP-VMM"/>
+                            <constraint firstItem="ci6-k0-xy2" firstAttribute="top" secondItem="bAe-Sv-mkg" secondAttribute="top" id="tlG-l0-C1M"/>
+                            <constraint firstItem="ci6-k0-xy2" firstAttribute="leading" secondItem="bAe-Sv-mkg" secondAttribute="leading" id="vx7-vn-YLa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bAe-Sv-mkg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="timeline.png" id="sT0-rB-fYB"/>
+                    <navigationItem key="navigationItem" title="Home" id="SB4-v3-qZr">
+                        <barButtonItem key="rightBarButtonItem" image="public.png" id="MM4-sa-bfd">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="changeTL:" destination="sf9-em-PeH" id="8cO-lB-oby"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="changeTLButton" destination="MM4-sa-bfd" id="Qg7-Ox-o7Z"/>
+                        <outlet property="indicator" destination="62a-DY-WPA" id="9nY-EC-7bI"/>
+                        <outlet property="tableView" destination="ci6-k0-xy2" id="jFS-AQ-ZLg"/>
+                        <segue destination="uvQ-mO-1Oi" kind="presentation" identifier="moveLoginView" id="5Hx-f5-xLB"/>
+                        <segue destination="KQ8-vL-7KW" kind="show" identifier="showDetail" id="5XF-lp-5jO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ut-2z-QGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="-754"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="tOo-CZ-qsy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="KQ8-vL-7KW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVb-9e-vW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-989"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="Pnd-ns-SoQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="login" id="uvQ-mO-1Oi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfJ-44-XHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="-906"/>
+        </scene>
+        <!--Toot-->
+        <scene sceneID="ctI-Bi-BBT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Toot" id="MeO-MP-Y1K" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgN-Kb-Wrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="-479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mio-SD-UIn">
+            <objects>
+                <navigationController storyboardIdentifier="TimeLine" automaticallyAdjustsScrollViewInsets="NO" id="s9q-C3-ZSJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="timeline.png" id="TyG-TT-kZ1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JAA-g2-CF7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sf9-em-PeH" kind="relationship" relationship="rootViewController" id="Wnm-sf-ecX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WO5-om-p2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402" y="-754"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add.png" width="36" height="36"/>
+        <image name="public.png" width="36" height="36"/>
+        <image name="timeline.png" width="36" height="36"/>
+    </resources>
+</document>
